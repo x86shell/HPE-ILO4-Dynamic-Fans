@@ -1,10 +1,9 @@
 [Unit]
-Description=Timer for controlling HPE Fan Speed dynamically.
+Description=Service for controlling HPE Fan Speed dynamically.
 
-[Timer]
-OnBootSec=10s
-OnUnitActiveSec=1m
-Unit=dynamicfan.service
+[Service]
+Type=oneshot
+ExecStart=/fans.sh
 
 [Install]
-WantedBy=timers.target
+WantedBy=multi-user.target
