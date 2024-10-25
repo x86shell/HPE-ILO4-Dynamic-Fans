@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for controlling HPE Fan Speed dynamically.
+
+[Timer]
+OnBootSec=10s
+OnUnitActiveSec=1m
+Unit=dynamicfan.service
+
+[Install]
+WantedBy=timers.target
